@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="DzS-gI-FfK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NAG-p3-u0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="Apm-by-y2F">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="829"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwV-C0-HXh">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1319.5"/>
@@ -74,11 +74,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Симптомы" image="suit.heart" catalog="system" id="3mq-xf-XqI"/>
-                    <size key="freeformSize" width="414" height="1896"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7v-My-DMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213" y="1095"/>
+            <point key="canvasLocation" x="-428" y="795"/>
         </scene>
         <!--О приложении-->
         <scene sceneID="IKz-3q-aKd">
@@ -107,18 +107,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ge7-hZ-qIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="492.75362318840581" y="760.71428571428567"/>
+            <point key="canvasLocation" x="297" y="761"/>
         </scene>
         <!--Статистика-->
         <scene sceneID="pzt-xf-352">
             <objects>
                 <viewController id="JGk-F5-E4e" customClass="StatisticsViewController" customModule="CovidStatistics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vpZ-Vc-o8i">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReP-iW-idB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проблемы с соединением" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhp-fd-V9Y">
+                                        <rect key="frame" x="98.5" y="321.5" width="217" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icloud.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Ks-8O-c1j">
+                                        <rect key="frame" x="131" y="149" width="152" height="128"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="129" id="SMc-ab-Faj"/>
+                                            <constraint firstAttribute="width" constant="152" id="l0v-wf-2OZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проверьте подключение к сети" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXT-Ca-HZN">
+                                        <rect key="frame" x="20" y="362" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64f-fs-8WW">
+                                        <rect key="frame" x="154" y="409" width="106" height="37"/>
+                                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="gPs-5B-TGN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="106" id="ybo-b2-zsV"/>
+                                        </constraints>
+                                        <state key="normal" title="Обновить">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="reloadButtonPressed" destination="JGk-F5-E4e" eventType="touchUpInside" id="yb0-Y5-kul"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="NXT-Ca-HZN" firstAttribute="leading" secondItem="ReP-iW-idB" secondAttribute="leading" constant="20" id="BNQ-2I-nnC"/>
+                                    <constraint firstItem="Qhp-fd-V9Y" firstAttribute="centerY" secondItem="ReP-iW-idB" secondAttribute="centerY" id="Duc-Ma-9iP"/>
+                                    <constraint firstItem="64f-fs-8WW" firstAttribute="top" secondItem="NXT-Ca-HZN" secondAttribute="bottom" constant="26.5" id="NOa-bc-4Pm"/>
+                                    <constraint firstItem="64f-fs-8WW" firstAttribute="centerX" secondItem="ReP-iW-idB" secondAttribute="centerX" id="UG8-dR-HPN"/>
+                                    <constraint firstAttribute="trailing" secondItem="NXT-Ca-HZN" secondAttribute="trailing" constant="20" id="XPk-MX-o2s"/>
+                                    <constraint firstItem="NXT-Ca-HZN" firstAttribute="top" secondItem="Qhp-fd-V9Y" secondAttribute="bottom" constant="20" id="ioT-mB-wZ3"/>
+                                    <constraint firstItem="Qhp-fd-V9Y" firstAttribute="top" secondItem="5Ks-8O-c1j" secondAttribute="bottom" constant="44" id="rD8-g2-Cnc"/>
+                                    <constraint firstItem="5Ks-8O-c1j" firstAttribute="centerX" secondItem="ReP-iW-idB" secondAttribute="centerX" id="tsd-jU-isZ"/>
+                                    <constraint firstItem="Qhp-fd-V9Y" firstAttribute="centerX" secondItem="ReP-iW-idB" secondAttribute="centerX" id="uxy-Ch-I6R"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FtP-kD-SZd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="663"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-Yi-GAe">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="564"/>
@@ -130,7 +186,7 @@
                                                     <segment title="Моя страна"/>
                                                 </segments>
                                                 <connections>
-                                                    <action selector="coverageSelected:" destination="JGk-F5-E4e" eventType="valueChanged" id="2Rq-yk-kuh"/>
+                                                    <action selector="coverageSelected" destination="JGk-F5-E4e" eventType="valueChanged" id="RAU-Pe-ggf"/>
                                                 </connections>
                                             </segmentedControl>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Eaa-2A-49N">
@@ -409,18 +465,24 @@
                         <viewLayoutGuide key="safeArea" id="W5Z-0W-JWJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ReP-iW-idB" firstAttribute="trailing" secondItem="W5Z-0W-JWJ" secondAttribute="trailing" id="19r-00-yFf"/>
                             <constraint firstItem="FtP-kD-SZd" firstAttribute="leading" secondItem="W5Z-0W-JWJ" secondAttribute="leading" id="7X2-tZ-8FG"/>
+                            <constraint firstItem="ReP-iW-idB" firstAttribute="top" secondItem="W5Z-0W-JWJ" secondAttribute="top" id="Gzc-eH-oj3"/>
+                            <constraint firstItem="ReP-iW-idB" firstAttribute="bottom" secondItem="W5Z-0W-JWJ" secondAttribute="bottom" id="MqF-ed-kbM"/>
                             <constraint firstItem="FtP-kD-SZd" firstAttribute="bottom" secondItem="W5Z-0W-JWJ" secondAttribute="bottom" id="P12-0m-v2c"/>
+                            <constraint firstItem="ReP-iW-idB" firstAttribute="leading" secondItem="W5Z-0W-JWJ" secondAttribute="leading" id="VlV-Qj-EcV"/>
                             <constraint firstItem="FtP-kD-SZd" firstAttribute="top" secondItem="W5Z-0W-JWJ" secondAttribute="top" id="yJg-yT-Xib"/>
                             <constraint firstItem="FtP-kD-SZd" firstAttribute="trailing" secondItem="W5Z-0W-JWJ" secondAttribute="trailing" id="yUY-kK-WwI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Статистика" image="chart.bar.xaxis" catalog="system" id="Chv-NN-yvY"/>
-                    <size key="freeformSize" width="414" height="1896"/>
+                    <size key="freeformSize" width="414" height="800"/>
                     <connections>
+                        <outlet property="contentView" destination="FtP-kD-SZd" id="uPh-eh-TL8"/>
                         <outlet property="coverageSegmentedControl" destination="gnK-EZ-mz9" id="HIv-u1-TzO"/>
                         <outlet property="currentInfectedLabel" destination="avB-8O-h3g" id="DrJ-nc-DSM"/>
                         <outlet property="deathsLabel" destination="fEZ-aR-ADX" id="f96-Nb-So7"/>
+                        <outlet property="noNetworkView" destination="ReP-iW-idB" id="mjJ-GJ-NMl"/>
                         <outlet property="recoveredLabel" destination="KLU-He-wef" id="sqV-Vg-4gG"/>
                         <outlet property="testsLabel" destination="MQu-JW-m4P" id="f8i-yV-e3O"/>
                         <outlet property="todayDeathsLabel" destination="rXc-vH-pIf" id="LoU-hP-GuJ"/>
@@ -430,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oq-vh-Z61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-907.24637681159425" y="1095.5357142857142"/>
+            <point key="canvasLocation" x="-1162.3188405797102" y="727.90178571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mUM-4i-zT4">
@@ -474,6 +536,7 @@
         <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="heart.text.square" catalog="system" width="128" height="114"/>
+        <image name="icloud.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.crop.circle.fill.badge.xmark" catalog="system" width="128" height="113"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>

@@ -8,6 +8,10 @@
 import UIKit
 import Alamofire
 
+enum ScreenState {
+    case error, content
+}
+
 class StatisticsViewController: UIViewController {
 
     @IBOutlet var coverageSegmentedControl: UISegmentedControl!
@@ -22,11 +26,20 @@ class StatisticsViewController: UIViewController {
     @IBOutlet var recoveredLabel: UILabel!
     @IBOutlet var testsLabel: UILabel!
     
+    @IBOutlet var noNetworkView: UIView!
+    @IBOutlet var contentView: UIScrollView!
+    
     override func viewDidLoad() {
+        loadSelectedCoverageCovidData()
+        
+        updateState(.content)
+    }
+    
+    @IBAction func coverageSelected() {
         loadSelectedCoverageCovidData()
     }
     
-    @IBAction func coverageSelected(_ sender: UISegmentedControl) {
+    @IBAction func reloadButtonPressed() {
         loadSelectedCoverageCovidData()
     }
     
@@ -35,19 +48,21 @@ class StatisticsViewController: UIViewController {
         case 0:
             NetworkManager.shared.fetchGlobalCovidData(
                 complition: { covidModel in
+                    self.updateState(.content)
                     self.configureCovidModel(covidModel)
                 },
                 failure: { error in
-                    self.showErrorAlert(error)
+                    self.updateState(.error)
                 }
             )
         case 1:
             NetworkManager.shared.fetchMyCountryCovidData(
                 complition: { covidModel in
+                    self.updateState(.content)
                     self.configureCovidModel(covidModel)
                 },
                 failure: { error in
-                    self.showErrorAlert(error)
+                    self.updateState(.error)
                 })
         default:
             break
@@ -67,30 +82,20 @@ class StatisticsViewController: UIViewController {
     }
 }
 
-// MARK: - AlertControllers
+// MARK: - Screen State
 extension StatisticsViewController {
     
-    private func showErrorAlert(_ error: Error) {
-        guard let error = error as? AFError, let urlError = error.underlyingError as? URLError else { return }
-            
-        let alertMessage: String
-        switch urlError.code {
-        case .timedOut, .notConnectedToInternet:
-            alertMessage = "Отсутствует интернет соединение. Проверьте подключение к сети."
-        default:
-            alertMessage = "Произошла какая-то непредвиденная ошибка. Уже разбираемся."
-            break
-        }
+    private func updateState(_ state: ScreenState) {
         
-        let alertController = UIAlertController(
-            title: "Oops!",
-            message: alertMessage,
-            preferredStyle: .alert
-        )
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.loadSelectedCoverageCovidData()
+        noNetworkView.isHidden = true
+        contentView.isHidden = true
+        
+        switch state {
+        case .content:
+            contentView.isHidden = false
+        case .error:
+            noNetworkView.isHidden = false
         }
-        alertController.addAction(okAction)
-        present(alertController, animated: true)
     }
+    
 }

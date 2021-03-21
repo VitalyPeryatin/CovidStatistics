@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02FC46EAC235644FE371DD51 /* Pods_CovidStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E5ADFD0EC937FD299B0A86 /* Pods_CovidStatistics.framework */; };
+		D82F22D126077C510082A982 /* NoNetworkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82F22D026077C510082A982 /* NoNetworkView.xib */; };
+		D82F22D426077C5F0082A982 /* NoNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F22D326077C5F0082A982 /* NoNetworkView.swift */; };
 		D88E1B7425F4075F000D3F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88E1B7325F4075F000D3F1E /* AppDelegate.swift */; };
 		D88E1B7625F4075F000D3F1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88E1B7525F4075F000D3F1E /* SceneDelegate.swift */; };
 		D88E1B7B25F4075F000D3F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88E1B7925F4075F000D3F1E /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		71E5ADFD0EC937FD299B0A86 /* Pods_CovidStatistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidStatistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		796EEABF2DAD5AF6ABE08B58 /* Pods-CovidStatistics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidStatistics.debug.xcconfig"; path = "Target Support Files/Pods-CovidStatistics/Pods-CovidStatistics.debug.xcconfig"; sourceTree = "<group>"; };
 		CBCF6D5071679551509CC3AC /* Pods-CovidStatistics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidStatistics.release.xcconfig"; path = "Target Support Files/Pods-CovidStatistics/Pods-CovidStatistics.release.xcconfig"; sourceTree = "<group>"; };
+		D82F22D026077C510082A982 /* NoNetworkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoNetworkView.xib; sourceTree = "<group>"; };
+		D82F22D326077C5F0082A982 /* NoNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkView.swift; sourceTree = "<group>"; };
 		D88E1B7025F4075F000D3F1E /* CovidStatistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidStatistics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88E1B7325F4075F000D3F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D88E1B7525F4075F000D3F1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D82F22CF26077C360082A982 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D82F22D026077C510082A982 /* NoNetworkView.xib */,
+				D82F22D326077C5F0082A982 /* NoNetworkView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D88E1B6725F4075F000D3F1E = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,7 @@
 		D88E1B7225F4075F000D3F1E /* CovidStatistics */ = {
 			isa = PBXGroup;
 			children = (
+				D82F22CF26077C360082A982 /* Views */,
 				D88E1B8E25F41F88000D3F1E /* ViewControllers */,
 				D88E1B9025F41F94000D3F1E /* Storyboards */,
 				D88E1B9625F4368A000D3F1E /* Service */,
@@ -199,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82F22D126077C510082A982 /* NoNetworkView.xib in Resources */,
 				D88E1B8025F40761000D3F1E /* LaunchScreen.storyboard in Resources */,
 				D88E1B7D25F40761000D3F1E /* Assets.xcassets in Resources */,
 				D88E1B7B25F4075F000D3F1E /* Main.storyboard in Resources */,
@@ -257,6 +272,7 @@
 				D88E1B9825F43698000D3F1E /* NetworkManager.swift in Sources */,
 				D88E1B8C25F41F77000D3F1E /* StatisticsViewController.swift in Sources */,
 				D88E1B8925F41E79000D3F1E /* CovidModel.swift in Sources */,
+				D82F22D426077C5F0082A982 /* NoNetworkView.swift in Sources */,
 				D88E1BA625F459AD000D3F1E /* TabBarViewController.swift in Sources */,
 				D88E1B7425F4075F000D3F1E /* AppDelegate.swift in Sources */,
 				D88E1B7625F4075F000D3F1E /* SceneDelegate.swift in Sources */,

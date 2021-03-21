@@ -26,46 +26,41 @@ class StatisticsViewController: UIViewController {
     @IBOutlet var recoveredLabel: UILabel!
     @IBOutlet var testsLabel: UILabel!
     
-    @IBOutlet var noNetworkView: UIView!
+    @IBOutlet var noNetworkView: NoNetworkView!
     @IBOutlet var contentView: UIScrollView!
     
     override func viewDidLoad() {
         loadSelectedCoverageCovidData()
         
         updateState(.content)
+        
+        noNetworkView.delegate = self
     }
     
     @IBAction func coverageSelected() {
         loadSelectedCoverageCovidData()
     }
     
-    @IBAction func reloadButtonPressed() {
-        loadSelectedCoverageCovidData()
-    }
-    
     private func loadSelectedCoverageCovidData() {
+        
+        let country: Country
         switch coverageSegmentedControl.selectedSegmentIndex {
         case 0:
-            NetworkManager.shared.fetchGlobalCovidData(
-                complition: { covidModel in
-                    self.updateState(.content)
-                    self.configureCovidModel(covidModel)
-                },
-                failure: { error in
-                    self.updateState(.error)
-                }
-            )
+            country = .world
         case 1:
-            NetworkManager.shared.fetchMyCountryCovidData(
-                complition: { covidModel in
-                    self.updateState(.content)
-                    self.configureCovidModel(covidModel)
-                },
-                failure: { error in
-                    self.updateState(.error)
-                })
+            country = .russia
         default:
-            break
+            return
+        }
+        
+        NetworkManager.shared.fetchCovidData(for: country) { result in
+            switch result {
+            case let .success(covidModel):
+                self.updateState(.content)
+                self.configureCovidModel(covidModel)
+            case .failure(_):
+                self.updateState(.error)
+            }
         }
     }
     
@@ -98,4 +93,11 @@ extension StatisticsViewController {
         }
     }
     
+}
+
+extension StatisticsViewController: ReloadButtonTappedDelegate {
+    
+    func reloadButtonTapped() {
+        loadSelectedCoverageCovidData()
+    }
 }

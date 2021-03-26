@@ -104,6 +104,8 @@
 			children = (
 				D88E1B7225F4075F000D3F1E /* CovidStatistics */,
 				D88E1B7C25F40761000D3F1E /* Assets.xcassets */,
+				D8556A40260E11450004F300 /* ReadmeRes */,
+				D8556A3D260E10350004F300 /* README.md */,
 				D88E1B7125F4075F000D3F1E /* Products */,
 				C21A383DF93445FB74E66D98 /* Pods */,
 				9BCA6197903E054957DED7F5 /* Frameworks */,
@@ -127,8 +129,6 @@
 				D88E1B9625F4368A000D3F1E /* Service */,
 				D88E1B9325F41FB4000D3F1E /* SupportingFiles */,
 				D88E1B9125F41F9E000D3F1E /* Models */,
-				D8556A40260E11450004F300 /* ReadmeRes */,
-				D8556A3D260E10350004F300 /* README.md */,
 			);
 			path = CovidStatistics;
 			sourceTree = "<group>";

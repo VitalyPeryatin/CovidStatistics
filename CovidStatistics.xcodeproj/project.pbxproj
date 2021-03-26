@@ -11,10 +11,10 @@
 		D82F22D126077C510082A982 /* NoNetworkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82F22D026077C510082A982 /* NoNetworkView.xib */; };
 		D82F22D426077C5F0082A982 /* NoNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F22D326077C5F0082A982 /* NoNetworkView.swift */; };
 		D8556A3E260E10350004F300 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D8556A3D260E10350004F300 /* README.md */; };
-		D8556A45260E11740004F300 /* Screenshot3.png in Resources */ = {isa = PBXBuildFile; fileRef = D8556A41260E11740004F300 /* Screenshot3.png */; };
-		D8556A46260E11740004F300 /* Screenshot1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8556A42260E11740004F300 /* Screenshot1.png */; };
-		D8556A47260E11740004F300 /* Screenshot4.png in Resources */ = {isa = PBXBuildFile; fileRef = D8556A43260E11740004F300 /* Screenshot4.png */; };
-		D8556A48260E11740004F300 /* Screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8556A44260E11740004F300 /* Screenshot2.png */; };
+		D8556A4F260E133A0004F300 /* Screenshot3.png in Resources */ = {isa = PBXBuildFile; fileRef = D8556A4B260E133A0004F300 /* Screenshot3.png */; };
+		D8556A50260E133A0004F300 /* Screenshot4.png in Resources */ = {isa = PBXBuildFile; fileRef = D8556A4C260E133A0004F300 /* Screenshot4.png */; };
+		D8556A51260E133A0004F300 /* Screenshot1.png in Resources */ = {isa = PBXBuildFile; fileRef = D8556A4D260E133A0004F300 /* Screenshot1.png */; };
+		D8556A52260E133A0004F300 /* Screenshot2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8556A4E260E133A0004F300 /* Screenshot2.png */; };
 		D88E1B7425F4075F000D3F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88E1B7325F4075F000D3F1E /* AppDelegate.swift */; };
 		D88E1B7625F4075F000D3F1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88E1B7525F4075F000D3F1E /* SceneDelegate.swift */; };
 		D88E1B7B25F4075F000D3F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88E1B7925F4075F000D3F1E /* Main.storyboard */; };
@@ -33,10 +33,10 @@
 		D82F22D026077C510082A982 /* NoNetworkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoNetworkView.xib; sourceTree = "<group>"; };
 		D82F22D326077C5F0082A982 /* NoNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkView.swift; sourceTree = "<group>"; };
 		D8556A3D260E10350004F300 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D8556A41260E11740004F300 /* Screenshot3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Screenshot3.png; path = ../../../../../Desktop/Screenshot3.png; sourceTree = "<group>"; };
-		D8556A42260E11740004F300 /* Screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Screenshot1.png; path = ../../../../../Desktop/Screenshot1.png; sourceTree = "<group>"; };
-		D8556A43260E11740004F300 /* Screenshot4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Screenshot4.png; path = ../../../../../Desktop/Screenshot4.png; sourceTree = "<group>"; };
-		D8556A44260E11740004F300 /* Screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Screenshot2.png; path = ../../../../../Desktop/Screenshot2.png; sourceTree = "<group>"; };
+		D8556A4B260E133A0004F300 /* Screenshot3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot3.png; sourceTree = "<group>"; };
+		D8556A4C260E133A0004F300 /* Screenshot4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot4.png; sourceTree = "<group>"; };
+		D8556A4D260E133A0004F300 /* Screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot1.png; sourceTree = "<group>"; };
+		D8556A4E260E133A0004F300 /* Screenshot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot2.png; sourceTree = "<group>"; };
 		D88E1B7025F4075F000D3F1E /* CovidStatistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidStatistics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88E1B7325F4075F000D3F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D88E1B7525F4075F000D3F1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,10 +91,10 @@
 		D8556A40260E11450004F300 /* ReadmeRes */ = {
 			isa = PBXGroup;
 			children = (
-				D8556A42260E11740004F300 /* Screenshot1.png */,
-				D8556A44260E11740004F300 /* Screenshot2.png */,
-				D8556A41260E11740004F300 /* Screenshot3.png */,
-				D8556A43260E11740004F300 /* Screenshot4.png */,
+				D8556A4D260E133A0004F300 /* Screenshot1.png */,
+				D8556A4E260E133A0004F300 /* Screenshot2.png */,
+				D8556A4B260E133A0004F300 /* Screenshot3.png */,
+				D8556A4C260E133A0004F300 /* Screenshot4.png */,
 			);
 			path = ReadmeRes;
 			sourceTree = "<group>";
@@ -236,14 +236,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8556A48260E11740004F300 /* Screenshot2.png in Resources */,
-				D8556A46260E11740004F300 /* Screenshot1.png in Resources */,
+				D8556A52260E133A0004F300 /* Screenshot2.png in Resources */,
 				D82F22D126077C510082A982 /* NoNetworkView.xib in Resources */,
+				D8556A51260E133A0004F300 /* Screenshot1.png in Resources */,
 				D88E1B8025F40761000D3F1E /* LaunchScreen.storyboard in Resources */,
 				D8556A3E260E10350004F300 /* README.md in Resources */,
-				D8556A47260E11740004F300 /* Screenshot4.png in Resources */,
-				D8556A45260E11740004F300 /* Screenshot3.png in Resources */,
+				D8556A4F260E133A0004F300 /* Screenshot3.png in Resources */,
 				D88E1B7D25F40761000D3F1E /* Assets.xcassets in Resources */,
+				D8556A50260E133A0004F300 /* Screenshot4.png in Resources */,
 				D88E1B7B25F4075F000D3F1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
